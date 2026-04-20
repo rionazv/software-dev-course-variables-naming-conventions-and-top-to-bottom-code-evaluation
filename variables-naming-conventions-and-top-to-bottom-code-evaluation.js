@@ -24,9 +24,14 @@ Things to reflect on:
   
 */
 
-let a = "Alice";
-let b = 5;
-let c = 20;
-let d = a + " bought " + b + " items for $" + c + ".";
+let buyerName = "Alice";
+let itemsBought = 5;
+let totalPaid = 20;
 
-console.log(d);
+let itemPrice = 8;
+let trueTotal = itemsBought * itemPrice;
+let discountPercentage = (trueTotal - totalPaid) / trueTotal * 100 ;
+
+let outputMessage = buyerName + " bought " + itemsBought + " items for $" + totalPaid + ". Each item was $" + itemPrice + ", but she got a " + discountPercentage + "% discount.";
+
+console.log(outputMessage);
